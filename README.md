@@ -1,6 +1,4 @@
 
-Project Name: F.R.I.E.N.D.S
-
 Developers:
 
     Rohith Bhat Kuthyar
