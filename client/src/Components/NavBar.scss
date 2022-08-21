@@ -1,0 +1,39 @@
+
+@import './../scss/general.scss';
+
+.nav-bar{
+  // height: 86vh;
+  // width: 7%;
+  background-color:rgb(166, 177, 111)  ;
+  grid-column:  1;
+  grid-row: 2 / 10;
+  
+  .nav-container{
+    @extend .general-ul-el;
+    padding: 10% 0% 0% 0%;
+    
+    .nav-item{
+      @extend .card;
+      border-radius: 5px;
+      border: 1px solid rgb(138, 136, 136);
+      margin: 10%;
+      height: 6vh;
+      text-align: center;
+      padding: 25% 0% 0% 0%;
+      
+      cursor: pointer;
+      
+      &:hover{
+        background-color:darken(rgb(166, 177, 111),10%)
+      }
+
+      &:active{
+        background-color:darken(rgb(166, 177, 111),20%)
+      }
+    }
+    a{
+      @extend .general-link;
+      color: rgb(8, 10, 106);
+    }
+  }
+}

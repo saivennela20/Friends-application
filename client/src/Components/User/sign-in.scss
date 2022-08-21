@@ -1,0 +1,38 @@
+@import './../../scss/general.scss';
+
+
+.sign-in-form{
+  padding: 5% 20% 20% 20%;
+  
+  *{
+    display: block;
+    align-items: center;
+    margin: 3%;
+  }
+
+  input {
+    height: 3vh;
+    width: 90%;
+    @extend .input-el
+  }
+
+  button{
+    height: 4vh;
+    margin: 18% 2% 2% 15%;
+    width: 70%;
+    @extend .general-button;
+  }
+  label{
+    font-size: $label-text;
+    text-align: center;
+  }
+  .error-message{
+    color: $error-color;
+    margin: 10%;
+    height: 2vh;
+    visibility: visible;
+    &.hide{
+      visibility: hidden;
+    }
+  }
+}

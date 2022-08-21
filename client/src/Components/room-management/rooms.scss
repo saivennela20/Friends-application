@@ -1,0 +1,150 @@
+// body{
+// 	margin: 0;
+// 	padding: 0; 
+// 	font-family: sans-serif; 
+// 	background: linear-gradient(to left, rgba(7,27,82,1) 0%, rgba(0,128,128,1) 100%) 
+// } 
+@import './../../scss/general.scss';
+
+@font-face{
+	font-family: 'SEGA LOGO FONT';
+	font-style: normal ;
+	font-weight: normal ;
+	src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff') 
+}
+h1 {
+	font-family: 'SEGA LOGO FONT';
+	font-weight: 200;
+	color: #0ccac4 
+}
+.f1 {
+    font-size: 2rem;
+}
+.tc {
+	text-align: center;
+}
+.ma2 {
+	margin: .5rem;
+}
+.bg-light-green {
+	background-color: #9eebcf;
+}
+.dib {
+	display: inline-block;
+}
+.shadow-5 {
+	box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 20%);
+}
+.bw2 {
+	border-width: .25rem;
+}
+
+.br3 {
+	border-radius: .5rem;
+}
+.pa2 {
+    // padding: .5rem;
+    display: inline-block;
+    padding:1%;
+}
+.pa3 {
+  @extend .input-el;
+    appearance: auto;
+    box-sizing: border-box;
+    padding:5%;
+    width: 18vw;
+}
+
+.new-room{
+	display: inline;
+}
+
+.new-room-btn{
+  @extend .general-button;
+  display: inline-block;
+  width: 10%;
+  padding: 1% 1% 1% 1%;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2% 5% 2% 5%; 
+.room-card{
+  @extend .card;
+  cursor: pointer;
+  margin: 1%;
+  padding: 1%;
+  width: 16vw;
+  h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  img{
+    width: 80%;
+  }
+}
+}
+
+.room-container{
+  .form-container{
+    margin: 5% 40% 0% 35%;
+    .close-btn{
+      float: right;
+      margin: 1%;
+    }
+    .form-label-el {
+      text-align: left !important ;
+      font-size:1.5em;
+      font-weight: bold;
+      text-align: left !important;
+    }
+    input {
+      width: 80% !important;
+      padding: 5% !important;
+    }
+    .add-user-btn{
+      margin: 5%;
+      padding: 3% 6% 3% 6%;
+    }
+    .submit-btn{
+      @extend .general-button;
+      padding: 3% 10% 3% 10%;
+    }
+
+    .delete-btn{
+      @include general-button(rgb(238, 76, 76));
+      padding: 3% 10% 3% 10%;
+      margin: 0% 0% 0% 5%;
+    }
+    .room-create-msg{
+      display: block;
+      color: red;
+      margin: 1%;
+    }
+    .user-el{
+      label{
+        display: inline-block;
+        text-align: left;
+        max-width: 7vw;
+        padding: 2% 2% 2% 0%;
+        font-size: 1em;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .user-display{
+       width:  10vw;
+       text-overflow: ellipsis;
+       word-wrap: normal;
+       overflow: hidden;
+       white-space: nowrap;
+      }
+      .delete-icon img{
+        width: 15%;
+
+      }
+    }
+  }
+}

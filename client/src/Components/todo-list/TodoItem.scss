@@ -1,0 +1,36 @@
+.todo-item{
+  width: 94%;
+  border-radius: 3px;
+  box-shadow: -3px 3px 5px 0px rgb(10 10 10 / 49%);
+  padding: 2% 3% 0% 3%;
+  font-size: 1em;
+  margin-top: 2%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover{
+    background-color: rgba(0, 0, 0, 0.069);
+    cursor: pointer;
+    .delete-icon{
+      visibility: visible;
+    }
+  }
+  &:active{
+    background-color: rgba(0, 0, 0, 0.285);
+  }
+  .delete-icon{
+    display: block;
+    visibility: hidden;
+    float: right;
+    // margin-top: 0%;
+  }
+  input{
+    display: inline;
+  }
+  span{
+    background-color: transparent;
+    margin: 0% 1% 1% 2%;
+  }
+
+}

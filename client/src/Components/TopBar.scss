@@ -1,0 +1,35 @@
+@import './../scss/general.scss';
+
+.top-bar{
+  // // width: 100VW;
+  // padding: 5px 5px 5px 4px;
+  grid-column: 2 / 11;
+  grid-row: 1;
+  background-color:rgb(229,199,251)  ;
+  height: 12vh;
+  .page-title{
+    text-align: center;
+    display: inline-block;
+    padding: 4vh 0 0 4vh;
+    font-size: $large-font;
+  }
+  .sign-out{
+    @extend .card;
+    float: right;
+    background-color: white;
+    // border-radius: 120px;
+    margin: 1.5%  2%  2%  2%;
+    padding: 1% 2% 1% 2%;
+    // height: 20%;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      background-color: darken(#fff, 20);
+    }
+
+    &:active{
+      background-color: darken(#fff, 40);
+    }
+  }
+}

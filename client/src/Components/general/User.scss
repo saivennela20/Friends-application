@@ -1,0 +1,22 @@
+@import './../../scss/general.scss';
+.user-display{
+  @extend .card;
+  margin: 3%;
+  padding: 1%;
+  width: 10vw;
+  .delete-icon{
+    visibility: hidden;
+    img{
+      float: right;
+      width: 10%;
+      vertical-align: middle;
+    }
+    
+  }
+  &:hover{
+    .delete-icon{
+    visibility: visible;
+    cursor: pointer;
+    }
+  }
+}

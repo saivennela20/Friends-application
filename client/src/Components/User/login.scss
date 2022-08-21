@@ -1,0 +1,29 @@
+@import './../../scss/general.scss';
+
+
+.banner{
+  margin: 8% 0% 0% 0%;
+  font-size: $large-font;
+  text-align: center;
+  span{
+    font-size: $large-font;
+  }
+}
+.login-container{
+  @extend .card;
+  margin :2% 40% 5% 40%;
+  background-color: white;
+  // height: 45vh;
+  padding: 1%;
+  .sign-up-link{
+    @extend .general-link;
+    display: block;
+    right: 5px;
+    text-align: center;
+  }
+}
+
+
+.sign-in-link{
+  @extend .general-link;
+}

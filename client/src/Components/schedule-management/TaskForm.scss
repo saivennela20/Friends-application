@@ -1,0 +1,106 @@
+@import './../../scss/general.scss';
+.hide{
+  display: none;
+}
+//container styling
+.form-container{
+  .form-group{
+    margin: 5%;
+   label{
+      margin: 2%;  
+   } 
+   //input elements styling
+   input,textarea{
+    width: 60%;
+     &:focus-visible{
+      outline-color:transparent
+     }
+   }
+   input[name="status"]{
+     width: auto;
+   }
+
+   textarea{
+     width: 65%;
+     height: 12vh;
+   }
+  
+   //input element block styling
+   .form-control{
+     display: block;
+     border-radius: 3px;
+     box-shadow:  -3px 3px 7px 0px rgb(10 10 10 / 49%);
+     border: 0px;
+     padding: 2%;
+     margin: 2%;
+
+     &.is-invalid{
+      box-shadow:  -3px 3px 7px 0px rgba(225, 73, 73, 0.49);
+     }
+   }
+
+  //  date container styling
+   .date-container{
+    display: inline-block;
+    
+  }
+  
+  
+   .invalid-feedback{
+    //  display: block;
+     color: red;
+   }
+  }
+  
+  .btn{
+    background-color: transparent;
+    box-shadow:  -3px 3px 7px 0px rgb(10 10 10 / 49%);
+    border: 0.5px solid rgba(0, 0, 0, 0.221);
+    border-radius: 3px;
+    width :25%;
+    height: 5vh;
+    margin: 5% 0% 0% 30%;
+    font-size: 1.2em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.069);
+      cursor: pointer;
+    }
+    &:active{
+      background-color: rgba(0, 0, 0, 0.285);
+    }
+  }
+  .close-btn{
+    float: right;
+    @include general-button(rgb(238, 76, 76));
+    padding: 1% 1% 1% 1%;
+    margin-right: 2%;
+  }
+}
+
+.add-user-btn{
+  @extend .general-button;
+  display: block;
+  margin: 1% 1% 1% 2%;
+  text-align: center;
+  padding: 1% 5% 1% 5%;
+}
+
+.mark-complete-btn{
+  display: block;
+  @extend .general-button;
+  text-align: center;
+  margin: 0% 0% 0% 15%;
+  padding: 1% 8% 1% 8%;
+}
+.created-by{
+  width: 20vw;
+  // height: 5vh;
+}
+
+.current-turn{
+  width: 20vw;
+  // height: 5vh;
+  
+}

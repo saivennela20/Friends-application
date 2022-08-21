@@ -1,0 +1,90 @@
+@import "./../scss/general.scss";
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  .logo {
+    color: #fff;
+    text-align: center;
+    padding-top: 5vh;
+    grid-column: 1;
+    grid-row: 1;
+    background-color:rgb(146,118,168);
+  }
+  .container-children {
+    grid-column: 2/11;
+    grid-row: 2/10;
+    display: flex;
+    padding: 1%;
+    overflow: hidden;
+
+    .child-1 {
+      @extend .card;
+      flex: 1 1 0px;
+      margin: 1%;
+      overflow: scroll;
+      flex-grow: 1;
+      max-width: 50vw;
+      &.tc{
+        max-width: unset;
+      }
+    }
+
+    @keyframes append-animate {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0%);
+        opacity: 1;	
+      }
+    }
+    @keyframes fade {
+      from { opacity: 1 }
+      to { opacity: 0 }
+    }
+    .append-animate{
+      animation: append-animate 0.5s  linear;
+    }
+    .child-2 {
+      @extend .card;
+      flex: 1 1 0px;
+      margin: 1%;
+      overflow: scroll;
+      
+      // animation: fade 2s;
+      
+    }
+    .child-3 {
+      @extend .card;
+      flex: 1 1 0px;
+      margin: 1%;
+      overflow: scroll;
+    }
+  }
+
+  .welcome-message {
+    grid-column: 2/11;
+    grid-row: 2/10;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    .message-wrapper {
+      margin: 5% 10% 0% 25%;
+      .title {
+        display: block;
+        color: rgb(235, 88, 113);
+        font-size: 3em;
+      }
+      .info-message {
+        display: block;
+        grid-column: 4/7;
+        grid-row: 8/10;
+        color: lighten(#000000, 50%);
+      }
+    }
+  }
+}

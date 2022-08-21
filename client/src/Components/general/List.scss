@@ -1,0 +1,35 @@
+@import './../../scss/general.scss';
+.room-list-container{
+  overflow: scroll;
+  .list-container{
+    @extend .general-ul-el;
+    padding: 0% 5% 5% 5%; 
+  }
+  .init-msg{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    max-width: 30vw;
+    margin: 15% 0% 0% 10%;
+    color: lighten(black,50%);
+  }
+  .list-title{
+    text-align: center;
+    display: block;
+    margin-top: 2%;
+    font-size: 2em;
+  }
+  .add-task-btn{
+    @include general-button($blue-color);
+    padding:1% 4% 1% 4%;
+    margin: 1%;
+  }
+
+  .close-tasks-btn{
+    @include general-button(rgb(238, 76, 76));
+    float: right;
+    padding:1% 4% 1% 4%;
+    margin: 1%;
+    cursor: pointer;
+  }
+}

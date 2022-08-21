@@ -1,0 +1,32 @@
+@import './../../scss/general.scss';
+
+.sign-up-form{
+  padding: 5% 20% 10% 20%;
+  *{
+    display: block;
+    align-items: center;
+    margin: 3%;
+  }
+
+  input {
+    height: 3vh;
+    width: 90%;
+    @extend .input-el
+  }
+
+  button{
+    height: 4vh;
+    margin: 25% 2% 0% 15%;
+    width: 70%;
+    @extend .general-button;
+  }
+  .error-message{
+    color: $error-color;
+    margin: 1% 0% 1% 0%;
+    height: 2vh;
+    visibility: visible;
+    &.hide{
+      visibility: hidden;
+    }
+  }
+}
